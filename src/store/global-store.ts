@@ -10,22 +10,22 @@ interface CartState {
   items: Map<string, CartItem>;
 }
 
+// Definowanie reactywnego stora do przechowywania produktow w koszyku
+
 export const store = reactive<CartState>({
   items: new Map(),
 });
 
-export const addProduct = (product: Product) => {
-  const item = store.items.get(product.slug);
+// Funkcja do dodawania produktow
 
-  if (item) {
-    item.quantity += 1;
-  } else {
-    store.items.set(product.slug, {
-      product,
-      quantity: 1,
-    });
-  }
+export const addProduct = (product: Product) => {
+  store.items.set(product.slug, {
+    product,
+    quantity: 1,
+  });
 };
+
+// Funkcja do zwiększenia liczby produktow
 
 export const increaseQuantity = (id: string) => {
   const item = store.items.get(id);
@@ -34,6 +34,8 @@ export const increaseQuantity = (id: string) => {
     item.quantity += 1;
   }
 };
+
+// Funkcja do zmniejszenia  liczby produktow lub do całkowitego usunięcia
 
 export const decreaseQuantity = (id: string) => {
   const item = store.items.get(id);

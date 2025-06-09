@@ -27,6 +27,8 @@
   import { addProduct } from "../../store/global-store.ts";
   import type { Product } from "../../types/types.ts";
 
+  // Definowanie propsa product do przekiworania informacji do komonentu
+
   defineProps<{
     product: Product;
   }>();

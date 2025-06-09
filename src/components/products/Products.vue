@@ -126,5 +126,7 @@
 
   const productsCategories = Object.keys(products);
 
+  // Ref do ustawienia wybranego radio buttonu
+
   const checkedRadio = ref(ProductsCategories.Ale);
 </script>

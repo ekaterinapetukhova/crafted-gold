@@ -28,6 +28,8 @@
   import CartCard from "./CartCard.vue";
   import { store } from "../../store/global-store.ts";
 
+  // Tworzenie listy produktow w koszykie z stora
+
   const cartItems = computed(() => {
     return [...store.items.values()].map((item) => {
       return {
@@ -38,6 +40,8 @@
       };
     });
   });
+
+  // Obliczanie calkowitej ceny koszyka
 
   const totalPrice = computed(() => {
     return cartItems.value.reduce((acc, item) => acc + item.price, 0);

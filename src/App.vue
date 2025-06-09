@@ -1,3 +1,6 @@
+<!-- Glowny komponent App, ktory zawiera Header, Footer oraz komponent Main, w ktorym jest ustawiony RouterView
+do zmiany widokow za pomoca routerza -->
+
 <template>
   <div class="min-h-full flex flex-col">
     <Header />

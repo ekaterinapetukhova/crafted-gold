@@ -4,12 +4,16 @@ import ContactsView from "../view/ContactsView.vue";
 import ProductsView from "../view/ProductsView.vue";
 import CartView from "../view/CartView.vue";
 
+// Definowanie enuma z nazwami stron
+
 enum Route {
   Index = "index",
   Contacts = "contacts",
   Products = "products",
   Cart = "cart",
 }
+
+// Onject router z danymi do sziazki, nazwy oraz widokiem potrzebnej strony
 
 const routes = [
   {

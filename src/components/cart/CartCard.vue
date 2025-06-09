@@ -16,6 +16,8 @@
   import BeerImage from "../../assets/images/beer.png";
   import { decreaseQuantity, increaseQuantity } from "../../store/global-store.ts";
 
+  // Definowanie wszystkich potrzebych prospow
+
   defineProps<{
     title: string;
     quantity: number;
